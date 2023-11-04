@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* @tailwind base; */
+
+@layer base {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 1.6rem !important;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 0.8rem;
+        height: 0.8rem;
+        scroll-behavior: smooth;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: transparent !important;
+        border-radius: 2rem;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 2rem;
+    }
+
+}
+
+
+@layer components {
+    .gallery__grids {
+        @apply mt-[4.6rem] py-[1rem] sm:py-[3rem] px-[1.4rem] sm:px-[3rem] grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-[1rem] lg:gap-[1.6rem] transition-all duration-500;
+    }
+
+    .gallery_grid_item {
+        @apply rounded-lg shadow-sm border border-gray-200 relative;
+    }
+}
