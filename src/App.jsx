@@ -1,14 +1,8 @@
-
-
 import React from 'react';
-import GalleryView from './components/gallery/View.jsx';
+import GalleryView from './components/gallery/View';
 
 const App = () => {
-  return (
-    <div>
-      <GalleryView />
-    </div>
-  );
+  return <GalleryView />;
 }
 
 export default App;

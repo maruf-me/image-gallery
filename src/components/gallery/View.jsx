@@ -10,6 +10,10 @@ const GalleryView = () => {
     const [pictureList, setPictureList] = useState(pictures);
 
 
+    console.log({ selected });
+    console.log({ pictureList });
+
+
     const handleDelete = () => {
         setPictureList(() => pictureList.filter((item) => !selected.includes(item.id)))
         setSelected([])

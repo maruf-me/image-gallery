@@ -29,17 +29,17 @@ const AddPicture = ({ updatePictureList }) => {
     }, [imageUrls])
 
 
-    const handleAdded = (e) => setUploadImage([...e.target.files]);
+    const handleAddFiles = (e) => setUploadImage([...e.target.files]);
 
 
     return (
-        <label htmlFor='AddFiles' className="flex flex-col gap-[1rem] items-center justify-center bg-gray-50 rounded-lg shadow-sm border border-dashed border-gray-300 h-[calc(15vh-.5rem)] lg:h-[calc(20vh-.8rem)] cursor-pointer text-gray-600 hover:scale-105 duration-300 hover:shadow-md">
+        <label htmlFor='AddFiles' className="gallery_image_add">
 
             <Icon icon="basil:image-outline" color="gray" width="36" height="36" />
 
             Add Images
 
-            <input type="file" multiple accept="image/*" id="AddFiles" className='hidden' onChange={handleAdded} />
+            <input type="file" multiple accept="image/*" id="AddFiles" className='hidden' onChange={handleAddFiles} />
         </label>
     )
 }

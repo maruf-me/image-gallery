@@ -4,8 +4,7 @@
 
 
 
-/* @tailwind base; */
-
+/* @tailwind base------------------------------ */
 @layer base {
     html {
         font-size: 62.5%;
@@ -36,7 +35,7 @@
 
 }
 
-
+/* @tailwind components------------------------ */
 @layer components {
     .gallery__grids {
         @apply mt-[4.6rem] py-[1rem] sm:py-[3rem] px-[1.4rem] sm:px-[3rem] grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-[1rem] lg:gap-[1.6rem] transition-all duration-500;
@@ -44,5 +43,9 @@
 
     .gallery_grid_item {
         @apply rounded-lg shadow-sm border border-gray-200 relative;
+    }
+
+    .gallery_image_add {
+        @apply flex flex-col gap-[1rem] items-center justify-center bg-gray-50 rounded-lg shadow-sm border border-dashed border-gray-300 h-[calc(15vh-.5rem)] lg:h-[calc(20vh-.8rem)] cursor-pointer text-gray-600 hover:scale-105 duration-300 hover:shadow-md
     }
 }

@@ -35,7 +35,6 @@ const Pictures = ({ selected, setSelected, prictures, setPictures }) => {
 
         // Update the actual image list
         setPictures(futerList);
-        // setSelected(selected);
     }
 
 
@@ -59,7 +58,7 @@ const Pictures = ({ selected, setSelected, prictures, setPictures }) => {
 
             <AddPicture updatePictureList={setPictures} />
 
-        </div >
+        </div>
     )
 }
 
