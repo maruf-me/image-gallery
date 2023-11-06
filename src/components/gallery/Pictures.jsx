@@ -6,14 +6,16 @@ const Pictures = ({ selected, setSelected, prictures, setPictures }) => {
 
     const dragImage = useRef(null);
     const dragOverImage = useRef(null);
+    
 
-    const selectedHandler = (event) => {
-        const { value, checked } = event.target;
-
+    const selectedHandler = (event, id) => {
+        const { checked } = event.target;
+        console.log(id);
+        console.log(checked);
         if (checked) {
-            setSelected(prv => [...prv, +value])
+            setSelected(prv => [...prv, +id])
         } else {
-            setSelected(() => [...selected.filter((id) => id !== +value)]);
+            setSelected(() => [...selected.filter((id) => id !== +id)]);
         }
     };
 
